@@ -1,0 +1,46 @@
+{
+  "name": "@tianz/eslint-config",
+  "version": "0.0.1",
+  "private": false,
+  "author": "tianz",
+  "description": "JS, TS, react ESLint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "homepage": "",
+  "main": "index.js",
+  "buildOptions": {
+    "type": "ignore"
+  },
+  "files": [
+    "rules",
+    "index.js",
+    "react.js",
+    "typescript.js"
+  ],
+  "publishConfig": {
+    "registry": "http://192.168.1.20:8081/repository/npm-internal/"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 5.5.0",
+    "@typescript-eslint/parser": ">= 5.5.0",
+    "eslint": ">= 8.3.0",
+    "eslint-plugin-react": ">= 7.27.1",
+    "eslint-plugin-react-hooks": ">= 4.3.0"
+  },
+  "dependencies": {
+    "@tianz/eslint-config-base": "workspace:^0.0.1"
+  }
+}

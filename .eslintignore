@@ -1,0 +1,4 @@
+**/*.d.ts
+**/*.js
+**/__test__
+node_modules

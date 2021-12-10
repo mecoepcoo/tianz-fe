@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "allowJs": false,
+    "emitDeclarationOnly": false,
+    "paths": {
+      "@tianz/*": ["./node_modules/@tianz/*/src"]
+    }
+  },
+  "exclude": ["**/*.test.ts", "dist"]
+}

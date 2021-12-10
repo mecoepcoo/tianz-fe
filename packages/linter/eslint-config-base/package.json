@@ -1,0 +1,37 @@
+{
+  "name": "@tianz/eslint-config-base",
+  "version": "0.0.1",
+  "private": false,
+  "author": "tianz",
+  "description": "base JS ESLint config",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "homepage": "",
+  "main": "index.js",
+  "buildOptions": {
+    "type": "ignore"
+  },
+  "files": [
+    "index.js",
+    "rules"
+  ],
+  "publishConfig": {
+    "registry": "http://192.168.1.20:8081/repository/npm-internal/"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives ."
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8.3.0",
+    "eslint-plugin-import": ">= 2.25.3"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.10"
+  }
+}
