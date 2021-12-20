@@ -94,7 +94,7 @@ importers:
 
   packages/linter/eslint-config:
     specifiers:
-      '@tianz/eslint-config-base': workspace:^0.0.1
+      '@tianz/eslint-config-base': workspace:^0.0.3
       '@typescript-eslint/eslint-plugin': ^5.5.0
       '@typescript-eslint/parser': ^5.5.0
       eslint: ^8.3.0
