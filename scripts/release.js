@@ -47,7 +47,7 @@ const run = async () => {
   }
   for (let package of result.data.packages) {
     shell.cd(package.path)
-    shell.exec('npm publish --access public')
+    shell.exec('pnpm publish --access public')
     console.log(chalk.green(`${package.name}发布完成`))
   }
   shell.cd(utils.resolve('..'))
