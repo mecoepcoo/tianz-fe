@@ -1,6 +1,6 @@
 {
   "name": "@tianz/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "author": "tianz",
   "description": "JS, TS, react ESLint config",
