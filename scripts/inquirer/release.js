@@ -61,7 +61,21 @@ async function inquireUpdateVersion(packagePath) {
   }
 }
 
+// 确认
+async function inquireEnsureRelease() {
+  let ensureReleaseAnswer = await inquirer.prompt([
+    {
+      type: 'confirm',
+      name: 'ensure_release',
+      message: '即将发布，确认吗',
+      default: false,
+    }
+  ])
+  return ensureReleaseAnswer.ensure_release
+}
+
 module.exports = {
   inquireNeedUpdateVersion,
   inquireUpdateVersion,
+  inquireEnsureRelease,
 }

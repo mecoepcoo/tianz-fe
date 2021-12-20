@@ -6,6 +6,10 @@ const releaseInquirer = require('./inquirer/release')
 const buildTools = require('./buildtools')
 const errorCodes = require('./errors')
 
+if (process.platform === 'win32') {
+  shell.exec('chcp 65001')
+}
+
 const run = async () => {
   utils.showWelcome()
 
@@ -35,9 +39,19 @@ const run = async () => {
   // 提交修改
   shell.exec('git add .')
   shell.exec('git commit -n -m "ore(release): bump version"')
-  // TODO: 登录npm
-
-  // TODO: 发布
+  // 发布，需要提前登录npm
+  let ensureRelease = await releaseInquirer.inquireEnsureRelease()
+  if (!ensureRelease) {
+    console.log(chalk.red('未发布，请确认流程后重试'))
+    return
+  }
+  for (let package of result.data.packages) {
+    shell.cd(package.path)
+    shell.exec('npm publish')
+    console.log(chalk.green(`${package.name}发布完成`))
+  }
+  shell.cd(utils.resolve('..'))
+  console.log(chalk.green('发布全部完成，请确认'))
 }
 
 run()

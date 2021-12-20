@@ -3,7 +3,8 @@
   "private": true,
   "author": "tianz",
   "scripts": {
-    "setup": "npm run reset && pnpm install --ignore-scripts",
+    "postinstall": "husky install",
+    "setup": "npm run reset && pnpm install",
     "commit": "git add . && cz",
     "reset": "pnpm dlx rimraf ./node_modules",
     "clean": "pnpm -r exec -- rimraf ./dist",
