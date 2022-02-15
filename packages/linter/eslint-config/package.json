@@ -41,6 +41,6 @@
     "eslint-plugin-react-hooks": ">= 4.3.0"
   },
   "dependencies": {
-    "@tianz/eslint-config-base": "workspace:^0.0.3"
+    "@tianz/eslint-config-base": "workspace:^"
   }
 }
